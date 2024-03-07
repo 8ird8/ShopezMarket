@@ -31,9 +31,10 @@ const Sidebar = () => {
     <>
 {/*     <div className="absolute top-4 left-4"
       onClick={() =>setOpen(true)}>
-      <img src="bars.png" alt="menu"  className=""/> */}
+      <img src="bars.png" alt="menu"  className=""/> 
 
       </div>
+      */}
       <div className="flex flex-row min-h-screen bg-gray-100 text-gray-800">
         <aside className={ `sidebar  md:shadow  ${open ? "transform lg:w-72 transition-transform  bg-slate-600 duration-150 ease-in  hidden lg:flex md:flex" : "flex"}     `}>
           <div className="sidebar-content w-full  px-4 py-6">
