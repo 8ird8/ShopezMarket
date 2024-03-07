@@ -29,9 +29,9 @@ const Sidebar = () => {
 
   return (
     <>
-    <div className="absolute top-4 left-4"
+{/*     <div className="absolute top-4 left-4"
       onClick={() =>setOpen(true)}>
-      <img src="bars.png" alt="menu"  className=""/>
+      <img src="bars.png" alt="menu"  className=""/> */}
 
       </div>
       <div className="flex flex-row min-h-screen bg-gray-100 text-gray-800">
