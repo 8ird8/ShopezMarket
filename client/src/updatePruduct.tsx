@@ -34,7 +34,7 @@ const UpdateProduct = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/product/${productId}`,
+          `https://shopezmarket.onrender.com/api/product/${productId}`,
           {
             withCredentials: true,
           }
@@ -61,14 +61,14 @@ const UpdateProduct = () => {
   const handleImageDelete = async (imageName: string) => {
     try {
       await axios.delete(
-        `http://localhost:3000/api/product/${productId}/image/${imageName}`,
+        `https://shopezmarket.onrender.com/api/product/${productId}/image/${imageName}`,
         {
           withCredentials: true,
         }
       );
-      // Update local state to remove the image
+     
       setProduct((currentProduct) => {
-        if (!currentProduct) return undefined; // Early return if currentProduct is undefined
+        if (!currentProduct) return undefined; 
 
         const updatedImages = currentProduct.product_Images.filter(
           (img) => img !== imageName
@@ -83,7 +83,7 @@ const UpdateProduct = () => {
   const handleDelete = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:3000/api/delete/${productId}`,
+        `https://shopezmarket.onrender.com/api/delete/${productId}`,
         {
           withCredentials: true,
         }
@@ -96,7 +96,7 @@ const UpdateProduct = () => {
       }
     } catch (error) {
       console.log(" u D'ONT HAVE THE ACCES :", error);
-      // Handle error or show a notification to the user
+      
     }
   };
 
@@ -116,7 +116,7 @@ const UpdateProduct = () => {
 
     try {
       const res = await axios.put(
-        `http://localhost:3000/api/updateProduct/${productId}`,
+        `https://shopezmarket.onrender.com/api/updateProduct/${productId}`,
         formData,
         {
           withCredentials: true,
@@ -142,7 +142,7 @@ const UpdateProduct = () => {
                 <div className="relative mb-6 lg:mb-10 lg:h-96">
                   <img
                     className="object-contain w-full lg:h-full"
-                    src={`http://localhost:3000/public/${mainImage}`}
+                    src={`https://shopezmarket.onrender.com/public/${mainImage}`}
                     alt="Product"
                   />
                 </div>
@@ -156,7 +156,7 @@ const UpdateProduct = () => {
                         >
                           <img
                             className="object-contain w-full lg:h-28"
-                            src={`http://localhost:3000/public/${image}`}
+                            src={`https://shopezmarket.onrender.com/public/${image}`}
                             alt="Product thumbnail"
                           />
                         </button>
