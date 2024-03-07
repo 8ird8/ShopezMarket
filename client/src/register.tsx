@@ -31,7 +31,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/register",
+        "https://shopezmarket.onrender.com/api/register",
         {
           username: username,
           email: email,
@@ -70,7 +70,7 @@ const Register = () => {
     
     const handleSignIn = async () => {
       
-      window.location.href = "http://localhost:3000/api/auth/google";
+      window.location.href = "https://shopezmarket.onrender.com/api/auth/google";
     };
     
   
